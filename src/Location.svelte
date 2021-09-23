@@ -16,15 +16,21 @@ function error() {
   status = 'Unable to retrieve your location';
 }
 
-if(!navigator.geolocation) {
-  status = 'Geolocation is not supported by your browser';
-} else {
-  status = 'Locating…';
-  navigator.geolocation.getCurrentPosition(success, error);
+function whereami() {
+  if(!navigator.geolocation) {
+    status = 'Geolocation is not supported by your browser';
+  } else {
+    status = 'Locating…';
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
 }
 </script>
 <div class="">
+  {#if status}
   <p>{status}</p>
+  {:else}
+  <button type="button" class="bg-svelte py-1 px-2 rounded" on:click={whereami}>Where Am I?</button>
+  {/if}
   {#if coords}
     <a href="{link}">{coords}</a>
   {/if}
