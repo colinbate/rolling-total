@@ -1,5 +1,5 @@
 {
-  "name": "svelte-ts-tailwind-app",
+  "name": "rolling-total",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "@rollup/plugin-typescript": "^8.2.1",
     "@tsconfig/svelte": "^2.0.1",
     "autoprefixer": "^10.2.6",
+    "idb-keyval": "^6.0.2",
     "postcss": "^8.3.5",
     "postcss-load-config": "^3.1.0",
     "rollup": "^2.52.0",
