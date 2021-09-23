@@ -11,7 +11,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        svelte: '#ff3e00',
+        svelte: {
+          DEFAULT: '#ff3e00',
+          dark: '#d63600',
+          light: '#ff5e29',
+        },
       },
     },
   },
